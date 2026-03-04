@@ -27,7 +27,15 @@ export const skills = [
     icon: "🎨",
     title: "UI/UX Design",
     desc: "User-centered design through research, wireframing, and high-fidelity prototyping.",
-    tags: ["Figma", "Wireframing", "Prototyping", "User Research", "User Flow", "Usability Testing", "Design Thinking"],
+    tags: [
+      "Figma",
+      "Wireframing",
+      "Prototyping",
+      "User Research",
+      "User Flow",
+      "Usability Testing",
+      "Design Thinking",
+    ],
   },
   {
     icon: "⚛️",
@@ -45,7 +53,13 @@ export const skills = [
     icon: "🗄️",
     title: "Database & API",
     desc: "Database design, integration, and thorough API testing workflows.",
-    tags: ["PostgreSQL", "MySQL", "Postman", "API Testing", "Functional Testing"],
+    tags: [
+      "PostgreSQL",
+      "MySQL",
+      "Postman",
+      "API Testing",
+      "Functional Testing",
+    ],
   },
   {
     icon: "🛡️",
@@ -167,7 +181,7 @@ export const certifications = [
     issuer: "Del Cyber Security Club",
     year: "2023 – 2024",
     badge: "✓ Certificate",
-    image: "/certs/sertifikat dcsc.png",
+    image: "/certs/sertifikat-dcsc.png",
   },
   {
     icon: "🏆",
@@ -175,7 +189,7 @@ export const certifications = [
     issuer: "University-Level Competition",
     year: "Sep 2025",
     badge: "🥇 Achievement",
-    image: "/certs/Sertifikat (51).pdf",
+    image: "/certs/Sertifikat-juara-1.pdf",
   },
 ];
 

@@ -1,0 +1,9 @@
+#skills { background: var(--bg); }
+.skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
+.skill-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; backdrop-filter: blur(12px); transition: var(--tr); }
+.skill-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 12px 36px rgba(124,106,255,.12); }
+.skill-card-icon { font-size: 1.7rem; margin-bottom: .7rem; }
+.skill-card-title { font-family: var(--font-head); font-weight: 700; font-size: .95rem; margin-bottom: .4rem; }
+.skill-card-desc { color: var(--muted); font-size: .84rem; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .7rem; }
+.tag { padding: .22rem .65rem; border-radius: 50px; background: rgba(124,106,255,.1); border: 1px solid rgba(124,106,255,.2); font-size: .72rem; color: var(--accent); }

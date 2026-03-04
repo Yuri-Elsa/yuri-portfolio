@@ -1,0 +1,62 @@
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  height: var(--nav-h); padding: 0 2rem;
+  background: rgba(10,10,15,.75); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border); transition: var(--tr);
+}
+nav.scrolled { background: rgba(10,10,15,.97); }
+
+.nav-logo {
+  font-family: var(--font-head); font-weight: 800;
+  font-size: 1.15rem; letter-spacing: -.02em; z-index: 210;
+}
+.nav-logo span { color: var(--accent); }
+
+.nav-links { display: flex; gap: 1.8rem; }
+.nav-links a {
+  font-size: .82rem; font-weight: 500; color: var(--muted);
+  letter-spacing: .05em; transition: color var(--tr); text-transform: uppercase;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--text); }
+
+.nav-cta {
+  padding: .45rem 1.1rem; border-radius: 50px;
+  background: var(--accent); color: #fff;
+  font-size: .82rem; font-weight: 600; transition: var(--tr);
+}
+.nav-cta:hover { background: #6355e0; transform: translateY(-1px); }
+
+.nav-hamburger {
+  display: none; flex-direction: column; justify-content: center; gap: 5px;
+  width: 36px; height: 36px; cursor: pointer; z-index: 210;
+  background: none; border: none; padding: 4px;
+}
+.nav-hamburger span {
+  display: block; height: 2px; width: 100%;
+  background: var(--text); border-radius: 2px; transition: var(--tr);
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  position: fixed; inset: 0; z-index: 199;
+  background: rgba(10,10,15,.98); backdrop-filter: blur(20px);
+  flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+  opacity: 0; transition: opacity .3s ease;
+}
+.mobile-menu.open { display: flex; opacity: 1; }
+.mobile-menu a {
+  font-family: var(--font-head); font-size: 2rem; font-weight: 800;
+  color: var(--muted); letter-spacing: -.02em; transition: var(--tr);
+  text-transform: uppercase;
+}
+.mobile-menu a:hover { color: var(--accent); }
+.mobile-menu .mob-cta {
+  margin-top: .5rem; padding: .8rem 2.5rem; border-radius: 50px;
+  background: var(--accent); color: #fff !important; font-family: var(--font-body);
+  font-size: 1rem; font-weight: 600;
+}
+.mobile-menu .mob-cta:hover { background: #6355e0; }

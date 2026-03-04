@@ -1,0 +1,59 @@
+#organizations {
+  background: var(--bg2);
+}
+.org-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.org-card-v {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  transition: var(--tr);
+}
+.org-card-v:hover {
+  border-color: rgba(255, 106, 158, 0.4);
+  box-shadow: 0 12px 36px rgba(255, 106, 158, 0.08);
+}
+.org-card-inner {
+  display: block;
+}
+.org-content {
+  padding: 1.6rem;
+}
+.org-header-v {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+.org-icon-v {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  flex-shrink: 0;
+  background: rgba(255, 106, 158, 0.1);
+  border: 1px solid rgba(255, 106, 158, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.org-name-v {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.org-role-v {
+  font-size: 0.8rem;
+  color: var(--accent2);
+  margin-top: 0.1rem;
+}
+.org-period-v {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.1rem;
+}

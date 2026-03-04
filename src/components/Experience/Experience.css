@@ -1,0 +1,12 @@
+#experience { background: var(--bg2); }
+.timeline { position: relative; padding-left: 1.8rem; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--border); }
+.timeline-item { position: relative; padding-bottom: 2.5rem; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before { content: ''; position: absolute; left: -2.2rem; top: .35rem; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg2); box-shadow: 0 0 0 4px rgba(124,106,255,.2); }
+.timeline-period { font-size: .75rem; color: var(--accent); letter-spacing: .06em; text-transform: uppercase; margin-bottom: .35rem; }
+.timeline-role { font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; margin-bottom: .15rem; }
+.timeline-org { color: var(--muted); font-size: .88rem; margin-bottom: .7rem; }
+.timeline-bullets { list-style: none; }
+.timeline-bullets li { position: relative; padding-left: 1.1rem; color: var(--muted); font-size: .88rem; margin-bottom: .35rem; }
+.timeline-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); }

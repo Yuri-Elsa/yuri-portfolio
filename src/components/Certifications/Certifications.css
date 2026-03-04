@@ -1,0 +1,18 @@
+#certs { background: var(--bg); }
+.certs-list { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.3rem; }
+.cert-card-v { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; backdrop-filter: blur(12px); transition: var(--tr); cursor: pointer; }
+.cert-card-v:hover { border-color: rgba(78,205,196,.4); transform: translateY(-4px); box-shadow: 0 12px 36px rgba(78,205,196,.1); }
+.cert-thumb { position: relative; height: 150px; overflow: hidden; background: var(--bg3); display: flex; align-items: center; justify-content: center; }
+.cert-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.cert-card-v:hover .cert-thumb img { transform: scale(1.05); }
+.cert-thumb-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .45rem; width: 100%; height: 100%; }
+.cert-thumb-placeholder-icon { font-size: 2.6rem; opacity: .22; }
+.cert-thumb-placeholder-text { font-size: .63rem; color: var(--muted); letter-spacing: .07em; text-transform: uppercase; }
+.cert-thumb-overlay { position: absolute; inset: 0; background: rgba(124,106,255,.08); display: flex; align-items: center; justify-content: center; opacity: 0; transition: var(--tr); }
+.cert-card-v:hover .cert-thumb-overlay { opacity: 1; }
+.cert-thumb-overlay-icon { font-size: 1.7rem; }
+.cert-info { padding: 1rem 1.2rem; }
+.cert-name-v { font-family: var(--font-head); font-size: .88rem; font-weight: 700; }
+.cert-issuer-v { font-size: .78rem; color: var(--muted); margin-top: .12rem; }
+.cert-year-v { font-size: .73rem; color: var(--accent); margin-top: .28rem; letter-spacing: .05em; }
+.cert-badge-strip { display: inline-flex; align-items: center; gap: .28rem; margin-top: .45rem; padding: .18rem .55rem; border-radius: 4px; background: rgba(78,205,196,.08); border: 1px solid rgba(78,205,196,.2); font-size: .68rem; color: var(--teal); }

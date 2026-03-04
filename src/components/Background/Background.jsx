@@ -20,7 +20,7 @@ export default function Background() {
     window.addEventListener("resize", resize);
 
     // Create particles
-    const NUM = 90;
+    const NUM = 220;
     particlesRef.current = Array.from({ length: NUM }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
@@ -49,9 +49,9 @@ export default function Background() {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
+          if (dist < 150) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(124,106,255,${0.08 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(124,106,255,${0.1 * (1 - dist / 150)})`;
             ctx.lineWidth = 0.6;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);

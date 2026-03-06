@@ -291,6 +291,11 @@
   left: 4px;
   animation-delay: -3s;
 }
+.chip-4 {
+  bottom: 40%;
+  left: -80px;
+  animation-delay: -1s;
+}
 
 /* Tech stack mini icons below */
 .hero-stack {

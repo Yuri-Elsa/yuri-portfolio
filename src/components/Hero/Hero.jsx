@@ -2,7 +2,7 @@ import { personal, stats } from "../../data";
 import { useEffect, useState } from "react";
 import "./Hero.css";
 
-const roles = ["Full-Stack Developer", "UI/UX Designer", "System Analyst"];
+const roles = ["Backend Developer", "Frontend Developer", "UI/UX Designer"];
 
 function TypingRole() {
   const [roleIdx, setRoleIdx] = useState(0);
@@ -129,9 +129,9 @@ export default function Hero() {
 
           <div className="hero-visual">
             <div className="avatar-wrap">
-              <div className="skill-chip chip-1">⚛️ React.js</div>
-              <div className="skill-chip chip-2">🎨 Figma & UI/UX</div>
-              <div className="skill-chip chip-3">⚡ Full-Stack Dev</div>
+              <div className="skill-chip chip-1">🖥️ Front-End Dev</div>
+              <div className="skill-chip chip-2">🎨 UI/UX Designer</div>
+              <div className="skill-chip chip-3">⚙️ Back-End Dev</div>
               <div className="avatar-ring">
                 <div className="orbit-dot" />
                 <div className="orbit-dot orbit-dot-2" />

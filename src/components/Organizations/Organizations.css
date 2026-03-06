@@ -1,59 +1,101 @@
 #organizations {
   background: var(--bg2);
 }
+
 .org-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
 }
+
 .org-card-v {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: var(--card2);
+  border: 1px solid var(--border2);
   border-radius: var(--radius);
-  overflow: hidden;
-  backdrop-filter: blur(12px);
+  padding: 1.6rem;
+  backdrop-filter: blur(16px);
   transition: var(--tr);
+  position: relative;
+  overflow: hidden;
+}
+.org-card-v::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--tr);
+}
+.org-card-v:hover::before {
+  transform: scaleX(1);
 }
 .org-card-v:hover {
-  border-color: rgba(255, 106, 158, 0.4);
-  box-shadow: 0 12px 36px rgba(255, 106, 158, 0.08);
+  border-color: rgba(255, 77, 109, 0.25);
+  box-shadow: 0 12px 36px rgba(255, 77, 109, 0.07);
 }
-.org-card-inner {
-  display: block;
-}
-.org-content {
-  padding: 1.6rem;
-}
+
 .org-header-v {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
-  margin-bottom: 0.9rem;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
 }
+
 .org-icon-v {
-  width: 38px;
-  height: 38px;
-  border-radius: 9px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   flex-shrink: 0;
-  background: rgba(255, 106, 158, 0.1);
-  border: 1px solid rgba(255, 106, 158, 0.2);
+  background: rgba(255, 77, 109, 0.08);
+  border: 1px solid rgba(255, 77, 109, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
+
 .org-name-v {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 0.92rem;
+  font-size: 0.93rem;
+  letter-spacing: -0.02em;
 }
 .org-role-v {
-  font-size: 0.8rem;
+  font-size: 0.79rem;
   color: var(--accent2);
   margin-top: 0.1rem;
+  font-weight: 600;
 }
 .org-period-v {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--muted);
   margin-top: 0.1rem;
+}
+
+.timeline-bullets {
+  list-style: none;
+}
+.timeline-bullets li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: var(--muted2);
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.65;
+}
+.timeline-bullets li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+}
+
+@media (max-width: 768px) {
+  .org-list {
+    grid-template-columns: 1fr;
+  }
 }

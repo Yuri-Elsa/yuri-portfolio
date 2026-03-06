@@ -1,14 +1,82 @@
-#contact { background: var(--bg2); }
-.contact-inner { max-width: 680px; margin: 0 auto; text-align: center; }
-.contact-desc { color: var(--muted); font-size: 1rem; margin-bottom: 2.8rem; }
-.social-icons { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
-.social-icon-link { display: flex; flex-direction: column; align-items: center; gap: .65rem; transition: var(--tr); }
-.social-icon-link:hover { transform: translateY(-7px); }
-.social-icon-circle { width: 72px; height: 72px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; background: var(--card); backdrop-filter: blur(8px); transition: var(--tr); }
-.social-icon-link.email:hover    .social-icon-circle { border-color: #ff6a9e; box-shadow: 0 8px 28px rgba(255,106,158,.22); background: rgba(255,106,158,.08); }
-.social-icon-link.linkedin:hover .social-icon-circle { border-color: #0a66c2; box-shadow: 0 8px 28px rgba(10,102,194,.22); background: rgba(10,102,194,.08); }
-.social-icon-link.whatsapp:hover .social-icon-circle { border-color: #25d366; box-shadow: 0 8px 28px rgba(37,211,102,.22); background: rgba(37,211,102,.08); }
-.social-icon-link.github:hover   .social-icon-circle { border-color: #e8e6f0; box-shadow: 0 8px 28px rgba(232,230,240,.14); background: rgba(232,230,240,.05); }
-.social-icon-label { font-size: .8rem; color: var(--muted); font-weight: 500; letter-spacing: .04em; }
-.social-icon-link:hover .social-icon-label { color: var(--text); }
-.icon-svg { width: 32px; height: 32px; }
+#contact {
+  background: var(--bg2);
+}
+
+.contact-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-desc {
+  color: var(--muted2);
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  transition: var(--tr);
+}
+.social-icon-link:hover {
+  transform: translateY(-8px);
+}
+
+.social-icon-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  border: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card2);
+  backdrop-filter: blur(12px);
+  transition: var(--tr);
+}
+.social-icon-link.email:hover .social-icon-circle {
+  border-color: #ff4d6d;
+  box-shadow: 0 10px 32px rgba(255, 77, 109, 0.25);
+  background: rgba(255, 77, 109, 0.08);
+}
+.social-icon-link.linkedin:hover .social-icon-circle {
+  border-color: #0a66c2;
+  box-shadow: 0 10px 32px rgba(10, 102, 194, 0.25);
+  background: rgba(10, 102, 194, 0.08);
+}
+.social-icon-link.whatsapp:hover .social-icon-circle {
+  border-color: #25d366;
+  box-shadow: 0 10px 32px rgba(37, 211, 102, 0.25);
+  background: rgba(37, 211, 102, 0.08);
+}
+.social-icon-link.github:hover .social-icon-circle {
+  border-color: var(--text);
+  box-shadow: 0 10px 32px rgba(240, 238, 255, 0.1);
+  background: rgba(240, 238, 255, 0.05);
+}
+
+.social-icon-label {
+  font-size: 0.77rem;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.social-icon-link:hover .social-icon-label {
+  color: var(--text);
+}
+.icon-svg {
+  width: 30px;
+  height: 30px;
+}

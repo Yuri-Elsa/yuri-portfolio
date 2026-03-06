@@ -1,9 +1,177 @@
-#about { background: var(--bg2); }
-.about-grid { display: grid; grid-template-columns: 320px 1fr; gap: 3rem; align-items: start; }
-.about-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.8rem; backdrop-filter: blur(12px); }
-.info-row { display: flex; align-items: center; gap: .7rem; padding: .65rem 0; border-bottom: 1px solid var(--border); font-size: .88rem; }
-.info-row:last-child { border-bottom: none; }
-.info-icon { font-size: .95rem; width: 22px; text-align: center; flex-shrink: 0; }
-.info-label { color: var(--muted); font-size: .75rem; display: block; line-height: 1.2; }
-.about-text p { color: var(--muted); margin-bottom: 1rem; line-height: 1.8; font-size: .95rem; }
-.about-text p strong { color: var(--text); }
+#about {
+  background: var(--bg2);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* ─── LEFT: Info Card ─── */
+.about-info-card {
+  background: var(--card2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+}
+
+.about-card-header {
+  padding: 1.4rem 1.8rem 1rem;
+  border-bottom: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.about-card-header-dots {
+  display: flex;
+  gap: 0.45rem;
+}
+.about-card-header-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.dot-red {
+  background: #ff5f57;
+}
+.dot-yellow {
+  background: #febc2e;
+}
+.dot-green {
+  background: #28c840;
+}
+.about-card-header-title {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 0.3rem;
+}
+
+.info-rows {
+  padding: 0.8rem 0;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.75rem 1.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 0.87rem;
+  transition: background var(--tr);
+}
+.info-row:last-child {
+  border-bottom: none;
+}
+.info-row:hover {
+  background: rgba(91, 94, 244, 0.05);
+}
+
+.info-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(91, 94, 244, 0.1);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.info-label {
+  color: var(--muted);
+  font-size: 0.72rem;
+  display: block;
+  line-height: 1.2;
+  margin-bottom: 0.12rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.info-value {
+  color: var(--text);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+/* ─── RIGHT: Text + Traits ─── */
+.about-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.about-text p {
+  color: var(--muted2);
+  margin-bottom: 0.9rem;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+.about-text p strong {
+  color: var(--text);
+  font-weight: 700;
+}
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Trait chips row */
+.about-traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.5rem;
+}
+.trait-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.38rem 0.85rem;
+  border-radius: 6px;
+  border: 1px solid var(--border2);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.78rem;
+  color: var(--muted2);
+  font-weight: 600;
+  transition: var(--tr);
+}
+.trait-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(91, 94, 244, 0.08);
+}
+.trait-chip-icon {
+  font-size: 0.9rem;
+}
+
+/* Fun fact strip */
+.about-quote {
+  padding: 1.2rem 1.5rem;
+  border-left: 2px solid var(--accent);
+  background: rgba(91, 94, 244, 0.06);
+  border-radius: 0 8px 8px 0;
+  margin-top: 0.5rem;
+}
+.about-quote-text {
+  font-size: 0.9rem;
+  color: var(--muted2);
+  line-height: 1.7;
+  font-style: italic;
+}
+.about-quote-text strong {
+  color: var(--text);
+  font-style: normal;
+}
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

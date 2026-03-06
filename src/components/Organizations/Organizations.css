@@ -2,12 +2,75 @@
   background: var(--bg2);
 }
 
-.org-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.4rem;
+/* ── Timeline wrapper ── */
+.org-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0.5rem 0 1rem;
 }
 
+/* Garis vertikal tengah */
+.org-timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    var(--accent),
+    rgba(91, 94, 244, 0.15)
+  );
+  z-index: 0;
+}
+
+/* Setiap baris */
+.org-timeline-row {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+
+/* Card di sisi KIRI — row genap */
+.org-timeline-row.left {
+  justify-content: flex-start;
+  padding-right: calc(50% + 2.5rem);
+}
+
+/* Card di sisi KANAN — row ganjil */
+.org-timeline-row.right {
+  justify-content: flex-end;
+  padding-left: calc(50% + 2.5rem);
+}
+
+/* Dot penghubung di tengah */
+.org-timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 1.4rem;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--bg2);
+  border: 2.5px solid var(--accent);
+  box-shadow:
+    0 0 0 4px rgba(91, 94, 244, 0.15),
+    0 0 14px rgba(91, 94, 244, 0.35);
+  z-index: 1;
+  transition: box-shadow var(--tr);
+}
+.org-timeline-row:hover .org-timeline-dot {
+  box-shadow:
+    0 0 0 6px rgba(91, 94, 244, 0.2),
+    0 0 22px rgba(91, 94, 244, 0.55);
+}
+
+/* ── Card ── */
 .org-card-v {
   background: var(--card2);
   border: 1px solid var(--border2);
@@ -17,6 +80,7 @@
   transition: var(--tr);
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 .org-card-v::before {
   content: "";
@@ -36,6 +100,32 @@
 .org-card-v:hover {
   border-color: rgba(255, 77, 109, 0.25);
   box-shadow: 0 12px 36px rgba(255, 77, 109, 0.07);
+}
+
+/* Connector arrow — kiri menunjuk ke kanan (ke garis tengah) */
+.org-timeline-row.left .org-card-v::after {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  right: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid var(--border2);
+}
+
+/* Connector arrow — kanan menunjuk ke kiri (ke garis tengah) */
+.org-timeline-row.right .org-card-v::after {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid var(--border2);
 }
 
 .org-header-v {
@@ -94,8 +184,26 @@
   color: var(--teal);
 }
 
+/* ── Responsive ── */
 @media (max-width: 768px) {
-  .org-list {
-    grid-template-columns: 1fr;
+  .org-timeline-line {
+    left: 16px;
+  }
+  .org-timeline-row.left,
+  .org-timeline-row.right {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 3rem;
+  }
+  .org-timeline-dot {
+    left: 16px;
+  }
+  .org-timeline-row.left .org-card-v::after,
+  .org-timeline-row.right .org-card-v::after {
+    top: 1rem;
+    left: -8px;
+    right: auto;
+    border-left: none;
+    border-right: 8px solid var(--border2);
   }
 }

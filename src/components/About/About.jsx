@@ -1,17 +1,6 @@
 import { personal } from "../../data";
 import "./About.css";
 
-const traits = [
-  { icon: "🎨", label: "UI/UX Design" },
-  { icon: "⚛️", label: "React.js" },
-  { icon: "⚙️", label: "Full-Stack" },
-  { icon: "🔬", label: "User Research" },
-  { icon: "🛡️", label: "Cybersecurity" },
-  { icon: "📐", label: "Figma" },
-  { icon: "🚀", label: "Problem Solver" },
-  { icon: "🤝", label: "Team Leader" },
-];
-
 export default function About() {
   return (
     <section id="about">
@@ -21,8 +10,19 @@ export default function About() {
           Who I <span>Am</span>
         </h2>
 
+        {/* Quote — tepat di bawah judul */}
+        <div className="about-quote reveal">
+          <p className="about-quote-text">
+            "I believe the best digital products come from{" "}
+            <strong>designing with empathy</strong> and{" "}
+            <strong>building with precision</strong> — where every pixel and
+            every line of code serves a purpose."
+          </p>
+        </div>
+
+        {/* Grid seimbang: profile card kiri, summary kanan */}
         <div className="about-grid">
-          {/* LEFT — Info card styled like a code editor / terminal */}
+          {/* LEFT — Info card */}
           <div className="about-info-card reveal">
             <div className="about-card-header">
               <div className="about-card-header-dots">
@@ -52,7 +52,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* RIGHT — Bio text + traits */}
+          {/* RIGHT — Bio text only */}
           <div className="about-text-col reveal">
             <div className="about-text">
               <p>
@@ -77,24 +77,12 @@ export default function About() {
                 complement my technical capabilities across the full product
                 development cycle.
               </p>
-            </div>
-
-            <div className="about-quote">
-              <p className="about-quote-text">
-                "I believe the best digital products come from{" "}
-                <strong>designing with empathy</strong> and{" "}
-                <strong>building with precision</strong> — where every pixel and
-                every line of code serves a purpose."
+              <p>
+                I'm deeply passionate about the intersection of design and
+                technology — always exploring new tools, frameworks, and
+                methodologies to deliver products that are not just functional,
+                but truly delightful to use.
               </p>
-            </div>
-
-            <div className="about-traits">
-              {traits.map((t) => (
-                <div className="trait-chip" key={t.label}>
-                  <span className="trait-chip-icon">{t.icon}</span>
-                  {t.label}
-                </div>
-              ))}
             </div>
           </div>
         </div>

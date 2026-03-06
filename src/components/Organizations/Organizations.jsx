@@ -9,26 +9,35 @@ export default function Organizations() {
         <h2 className="section-title reveal">
           Organizational <span>Experience</span>
         </h2>
-        <div className="org-list">
+
+        <div className="org-timeline">
+          {/* Garis tengah vertikal */}
+          <div className="org-timeline-line" />
+
           {organizations.map((org, i) => (
-            <div className="org-card-v reveal" key={i}>
-              <div className="org-card-inner">
-                <div className="org-content">
-                  <div className="org-header-v">
-                    <div className="org-icon-v">{org.icon}</div>
-                    <div>
-                      <div className="org-name-v">{org.name}</div>
-                      <div className="org-role-v">{org.role}</div>
-                      <div className="org-period-v">{org.period}</div>
-                    </div>
+            <div
+              className={`org-timeline-row reveal ${i % 2 === 0 ? "left" : "right"}`}
+              key={i}
+            >
+              {/* Card */}
+              <div className="org-card-v">
+                <div className="org-header-v">
+                  <div className="org-icon-v">{org.icon}</div>
+                  <div>
+                    <div className="org-name-v">{org.name}</div>
+                    <div className="org-role-v">{org.role}</div>
+                    <div className="org-period-v">{org.period}</div>
                   </div>
-                  <ul className="timeline-bullets">
-                    {org.bullets.map((b, j) => (
-                      <li key={j}>{b}</li>
-                    ))}
-                  </ul>
                 </div>
+                <ul className="timeline-bullets">
+                  {org.bullets.map((b, j) => (
+                    <li key={j}>{b}</li>
+                  ))}
+                </ul>
               </div>
+
+              {/* Dot di tengah */}
+              <div className="org-timeline-dot" />
             </div>
           ))}
         </div>

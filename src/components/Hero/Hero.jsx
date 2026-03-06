@@ -1,5 +1,47 @@
 import { personal, stats } from "../../data";
+import { useEffect, useState } from "react";
 import "./Hero.css";
+
+const roles = ["Full-Stack Developer", "UI/UX Designer", "System Analyst"];
+
+function TypingRole() {
+  const [roleIdx, setRoleIdx] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [phase, setPhase] = useState("typing");
+
+  useEffect(() => {
+    const current = roles[roleIdx];
+    let timeout;
+    if (phase === "typing") {
+      if (displayed.length < current.length) {
+        timeout = setTimeout(
+          () => setDisplayed(current.slice(0, displayed.length + 1)),
+          70,
+        );
+      } else {
+        timeout = setTimeout(() => setPhase("pause"), 1800);
+      }
+    } else if (phase === "pause") {
+      timeout = setTimeout(() => setPhase("deleting"), 400);
+    } else if (phase === "deleting") {
+      if (displayed.length > 0) {
+        timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 38);
+      } else {
+        setRoleIdx((i) => (i + 1) % roles.length);
+        setPhase("typing");
+      }
+    }
+    return () => clearTimeout(timeout);
+  }, [displayed, phase, roleIdx]);
+
+  return (
+    <div className="hero-typing-role">
+      <span className="typing-prefix">~ </span>
+      <span className="typing-text">{displayed}</span>
+      <span className="typing-cursor">|</span>
+    </div>
+  );
+}
 
 export default function Hero() {
   return (
@@ -7,17 +49,9 @@ export default function Hero() {
       <div className="container">
         <div className="hero-grid">
           <div className="hero-content">
-            {/* Status badge */}
             <div className="hero-eyebrow">
               <span className="hero-eyebrow-dot" />
               <span className="hero-eyebrow-text">Open to opportunities</span>
-            </div>
-
-            {/* Code-style role badge */}
-            <div className="hero-code-badge">
-              <span className="cb-key">role</span>
-              <span style={{ color: "var(--muted)" }}>=</span>
-              <span className="cb-val">"FullStack Dev & UI/UX Designer"</span>
             </div>
 
             <h1 className="hero-title">
@@ -26,6 +60,9 @@ export default function Hero() {
                 <span className="accent-word">Pakpahan</span>
               </span>
             </h1>
+
+            {/* Typing role — tepat di bawah nama */}
+            <TypingRole />
 
             <p className="hero-sub">{personal.tagline}</p>
 

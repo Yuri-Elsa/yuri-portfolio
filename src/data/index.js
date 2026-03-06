@@ -11,7 +11,7 @@ export const personal = {
   linkedin: "yuri-pakpahan",
   github: "Yuri-Elsa",
   whatsapp: "6285260153158",
-  cvFile: "Yuri_Elsa_Rona_Uli_Pakpahan-resume__5_.docx",
+  cvFile: "Yuri.pdf",
   tagline:
     "Software Developer & UI/UX Designer crafting intuitive, scalable digital products — from clean code to beautiful interfaces.",
 };

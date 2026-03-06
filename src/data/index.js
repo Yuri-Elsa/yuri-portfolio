@@ -104,7 +104,7 @@ export const projects = [
     role: "UI/UX Designer · Jan 2025 – Present",
     desc: "Church management system with web and mobile interfaces. Designed intuitive user flows and prototyped high-fidelity screens using Figma, then implemented with React.js and Flutter following user-centered design principles.",
     stack: ["Figma", "React.js", "Flutter", "UI/UX Design"],
-    link: "#",
+    link: "https://www.figma.com/design/VReUHzvulMN7nSxkcssvny/Proyek-Web-Design-GPDI?node-id=0-1&t=wrfmGGetyB5gCy6u-1",
   },
   {
     num: "02",

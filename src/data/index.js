@@ -199,6 +199,22 @@ export const certifications = [
     badge: "🥇 Achievement",
     image: "/certs/Sertifikat-juara-1.pdf",
   },
+  {
+    icon: "🧪",
+    name: "IB Physics Laboratory Assistant",
+    issuer: "Del Institute of Technology",
+    year: "Sep 2024 – Nov 2024",
+    badge: "✓ Certificate",
+    image: "/certs/aslab.pdf",
+  },
+  {
+    icon: "📚",
+    name: "Education Division Member",
+    issuer: "Informatics Student Association",
+    year: "Jan 2025 – Dec 2025",
+    badge: "✓ Certificate",
+    image: "/certs/pendidikan.pdf",
+  },
 ];
 
 export const navLinks = [

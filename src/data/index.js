@@ -122,6 +122,14 @@ export const projects = [
     stack: ["Laravel", "Vue.js", "React", "System Analysis"],
     link: "https://itdel-ppkha.delpick.fun:8080/",
   },
+  {
+    num: "04",
+    title: "Game Connect Four",
+    role: "Game Developer · Mar 2026",
+    desc: "Web-based student achievement & activity platform for IT Del. Analyzed business requirements, defined project scope, and translated user needs into system specifications. Collaborated on a Laravel and Vue.js/React stack.",
+    stack: ["JavaScript", "HTML", "React", "Vite"],
+    link: "https://github.com/Yuri-Elsa/Game_Connect_Four",
+  },
 ];
 
 export const organizations = [

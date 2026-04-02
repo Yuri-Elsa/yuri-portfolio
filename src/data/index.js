@@ -126,9 +126,17 @@ export const projects = [
     num: "04",
     title: "Game Connect Four",
     role: "Game Developer · Mar 2026",
-    desc: "Web-based student achievement & activity platform for IT Del. Analyzed business requirements, defined project scope, and translated user needs into system specifications. Collaborated on a Laravel and Vue.js/React stack.",
+    desc: "Classic Connect Four game with a modern web interface. Developed the game logic and interactive UI using React.js and Vite, ensuring responsive design and smooth gameplay.",
     stack: ["JavaScript", "HTML", "React", "Vite"],
     link: "https://github.com/Yuri-Elsa/Game_Connect_Four",
+  },
+  {
+    num: "05",
+    title: "Watchlist Movie App",
+    role: "Mobile App Developer · Mar 2026",
+    desc: "Mobile application for creating and managing movie watchlists. Built with Kotlin-Ktor and Android Studio, featuring a clean UI and seamless user experience.",
+    stack: ["Kotlin", "Ktor", "Android Studio"],
+    link: "https://github.com/Yuri-Elsa/Proyek_Watchlist",
   },
 ];
 
